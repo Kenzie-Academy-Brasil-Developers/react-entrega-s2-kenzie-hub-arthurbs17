@@ -1,8 +1,16 @@
+import FormLogin from "../../components/FormLogin";
+import { Container, Content } from "./styles";
+
 const Login = () => {
   return (
-    <div>
-      <h1>Login</h1>
-    </div>
+    <Container>
+      <Content>
+        <h1>Login</h1>
+        <div>
+          <FormLogin />
+        </div>
+      </Content>
+    </Container>
   );
 };
 
