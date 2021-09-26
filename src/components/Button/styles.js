@@ -9,6 +9,7 @@ export const Container = styled.button`
   font-family: "Pacifico", cursive;
   width: 100%;
   transition: 0.5s;
+  margin-top: 20px;
   :hover {
     border-color: #f08080;
     color: #f08080;
