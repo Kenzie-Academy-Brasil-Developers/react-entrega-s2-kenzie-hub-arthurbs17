@@ -30,6 +30,7 @@ const Profile = () => {
         <h1>{user.name}</h1>
         <div>
           <FormAddTechs token={token} setTechs={setTechs} />
+          <h4>Tecnologias aprendidas:</h4>
           <CardsTechs list={techs} token={token} setTechs={setTechs} />
         </div>
       </Content>
