@@ -66,6 +66,9 @@ const FormLogin = () => {
         <Button type="submit" formSchema>
           Login
         </Button>
+        <Button formSchema onClick={() => history.push("/")}>
+          Voltar
+        </Button>
       </form>
       {userNotRegistered && (
         <span>Usuário não Cadastrado/Credênciais erradas!</span>

@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import Button from "../Button";
 import { useHistory } from "react-router";
+import { useState } from "react";
 const FormRegister = () => {
   const schema = yup.object().shape({
     name: yup
@@ -34,17 +35,18 @@ const FormRegister = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
+  const [errorRegister, setErrorRegister] = useState(false);
+
   const handleForm = (data) => {
     axios
       .post("https://kenziehub.herokuapp.com/users", data)
       .then((response) => {
-        console.log(response);
         history.push("/login");
       })
       .catch((error) => {
         console.log(error);
+        setErrorRegister(true);
       });
-    console.log(data);
   };
   const history = useHistory();
   return (
@@ -108,7 +110,13 @@ const FormRegister = () => {
         <Button type="submit" formSchema>
           Enviar
         </Button>
+        <Button formSchema onClick={() => history.push("/")}>
+          Voltar
+        </Button>
       </form>
+      {errorRegister && (
+        <span>Usuário já cadastrado ou Campo obrigatório não preenchido</span>
+      )}
     </div>
   );
 };

@@ -19,6 +19,9 @@ export const Content = styled.div`
   }
   div {
     background-color: #fff;
+    button + button {
+      margin-left: 1rem;
+    }
   }
   span {
     background-color: #fff;
