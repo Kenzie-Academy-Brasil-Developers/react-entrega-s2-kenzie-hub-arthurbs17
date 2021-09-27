@@ -5,6 +5,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useHistory } from "react-router";
+import { useState } from "react";
 const FormLogin = () => {
   const schema = yup.object().shape({
     email: yup.string().email("Email inválido").required("Campo obrigatório!"),
@@ -23,6 +24,8 @@ const FormLogin = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
+  const [userNotRegistered, setUserNotRegistered] = useState(false);
+
   const history = useHistory();
 
   const handleForm = (data) => {
@@ -36,6 +39,7 @@ const FormLogin = () => {
       })
       .catch((error) => {
         console.log(error);
+        setUserNotRegistered(true);
       });
     console.log(data);
   };
@@ -56,6 +60,7 @@ const FormLogin = () => {
           variant="outlined"
           size="small"
           margin="dense"
+          type="password"
           {...register("password")}
           error={!!errors.password}
           helperText={errors.password?.message}
@@ -64,6 +69,9 @@ const FormLogin = () => {
           Login
         </Button>
       </form>
+      {userNotRegistered && (
+        <span>Usuário não Cadastrado/Credênciais erradas!</span>
+      )}
     </div>
   );
 };

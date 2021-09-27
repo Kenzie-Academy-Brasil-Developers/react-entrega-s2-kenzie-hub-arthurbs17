@@ -73,6 +73,7 @@ const FormRegister = () => {
           variant="outlined"
           size="small"
           margin="dense"
+          type="password"
           {...register("password")}
           error={!!errors.password}
           helperText={errors.password?.message}

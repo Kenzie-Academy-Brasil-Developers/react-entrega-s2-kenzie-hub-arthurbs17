@@ -20,4 +20,9 @@ export const Content = styled.div`
   div {
     background-color: #fff;
   }
+  span {
+    background-color: #fff;
+    color: red;
+    font-size: 0.9rem;
+  }
 `;

@@ -5,6 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 10px;
 `;
 
 export const Content = styled.ul`
