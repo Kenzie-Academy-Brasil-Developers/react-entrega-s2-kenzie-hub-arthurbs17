@@ -20,5 +20,8 @@ export const Content = styled.ul`
     margin: 5px;
     background-color: #fff;
     border: 1px solid #021ca5;
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
   }
 `;

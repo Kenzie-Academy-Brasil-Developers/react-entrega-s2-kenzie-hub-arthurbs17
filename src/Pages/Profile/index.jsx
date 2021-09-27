@@ -22,15 +22,15 @@ const Profile = () => {
         setTechs(response.data.techs);
       })
       .catch((e) => console.log(e));
-  });
+  }, [token]);
 
   return (
     <Container>
       <Content>
         <h1>{user.name}</h1>
         <div>
-          <FormAddTechs token={token} />
-          <CardsTechs list={techs} />
+          <FormAddTechs token={token} setTechs={setTechs} />
+          <CardsTechs list={techs} token={token} setTechs={setTechs} />
         </div>
       </Content>
     </Container>
