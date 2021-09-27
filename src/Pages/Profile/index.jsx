@@ -29,7 +29,7 @@ const Profile = () => {
       <Content>
         <h1>{user.name}</h1>
         <div>
-          <FormAddTechs token={token} setTechs={setTechs} />
+          <FormAddTechs token={token} setTechs={setTechs} list={techs} />
           <h4>Tecnologias aprendidas:</h4>
           <CardsTechs list={techs} token={token} setTechs={setTechs} />
         </div>

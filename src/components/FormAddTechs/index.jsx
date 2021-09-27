@@ -5,7 +5,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 
-const FormAddTechs = ({ token, setTechs }) => {
+const FormAddTechs = ({ token, setTechs, list }) => {
   const schema = yup.object().shape({
     title: yup.string().required("Campo obrigatório!"),
     status: yup
@@ -25,13 +25,11 @@ const FormAddTechs = ({ token, setTechs }) => {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        console.log(response);
-        setTechs(response);
+        setTechs([...list, response.data]);
       })
       .catch((error) => {
         console.log(error);
       });
-    console.log(data);
   };
   return (
     <div>

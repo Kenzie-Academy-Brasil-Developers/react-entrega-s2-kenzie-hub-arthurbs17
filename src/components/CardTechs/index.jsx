@@ -17,7 +17,7 @@ const CardsTechs = ({ list, token, setTechs }) => {
   return (
     <Container>
       <Content>
-        {list.map((tech, index) => (
+        {list?.map((tech, index) => (
           <li key={index}>
             <p>Tech: {tech.title}</p>
             <p>Status: {tech.status}</p>

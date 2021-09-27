@@ -32,7 +32,6 @@ const FormLogin = () => {
     axios
       .post("https://kenziehub.herokuapp.com/sessions", data)
       .then((response) => {
-        console.log(response);
         localStorage.clear();
         localStorage.setItem("token", JSON.stringify(response.data.token));
         history.push("/profile");
@@ -41,7 +40,6 @@ const FormLogin = () => {
         console.log(error);
         setUserNotRegistered(true);
       });
-    console.log(data);
   };
   return (
     <div>
