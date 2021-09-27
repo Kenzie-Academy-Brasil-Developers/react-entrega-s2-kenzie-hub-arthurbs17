@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 250px;
+  height: 400px;
   width: 240px;
   background: #fff;
   h1 {

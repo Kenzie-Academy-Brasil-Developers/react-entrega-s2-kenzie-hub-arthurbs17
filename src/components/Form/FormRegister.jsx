@@ -104,7 +104,9 @@ const FormRegister = () => {
           error={!!errors.bio}
           helperText={errors.bio?.message}
         />
-        <Button type="submit">Enviar</Button>
+        <Button type="submit" formSchema>
+          Enviar
+        </Button>
       </form>
     </div>
   );

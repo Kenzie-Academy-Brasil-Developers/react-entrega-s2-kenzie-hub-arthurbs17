@@ -7,7 +7,7 @@ export const Container = styled.button`
   border: 2px solid #021ca5;
   border-radius: 5px;
   font-family: "Pacifico", cursive;
-  width: 100%;
+  width: ${(props) => (props.formSchema ? "100px" : "100%")};
   transition: 0.5s;
   margin-top: 20px;
   :hover {
