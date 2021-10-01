@@ -12,8 +12,6 @@ export const Content = styled.div`
   height: 400px;
   width: 240px;
   background: #fff;
-  border: 3px solid #021ca5;
-  border-radius: 5px;
   h1 {
     font-size: 1.5rem;
     color: #021ca5;
