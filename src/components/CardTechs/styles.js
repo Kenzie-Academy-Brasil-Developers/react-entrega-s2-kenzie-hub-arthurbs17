@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   text-align: center;
   padding: 10px;
+  flex-direction: column;
 `;
 
 export const Content = styled.ul`

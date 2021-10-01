@@ -12,10 +12,13 @@ export const Content = styled.div`
   height: 400px;
   width: 240px;
   background: #fff;
+  border: 3px solid #021ca5;
+  border-radius: 5px;
   h1 {
     font-size: 1.5rem;
     color: #021ca5;
     background-color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   }
   div {
     background-color: #fff;
@@ -23,5 +26,9 @@ export const Content = styled.div`
   h4 {
     background-color: #fff;
     margin-top: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
   }
 `;

@@ -14,6 +14,11 @@ const CardsTechs = ({ list, token, setTechs }) => {
 
   const history = useHistory();
 
+  const logOut = () => {
+    localStorage.clear();
+    history.push("/");
+  };
+
   return (
     <Container>
       <Content>
@@ -26,8 +31,10 @@ const CardsTechs = ({ list, token, setTechs }) => {
             </Button>
           </li>
         ))}
-        <Button onClick={() => history.push("/")}>Sair</Button>
       </Content>
+      <Button formSchema onClick={() => logOut()}>
+        Sair
+      </Button>
     </Container>
   );
 };

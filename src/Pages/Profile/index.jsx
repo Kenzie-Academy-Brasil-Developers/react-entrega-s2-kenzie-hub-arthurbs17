@@ -6,7 +6,7 @@ import { Container, Content } from "./styles";
 
 const Profile = () => {
   const [user, setUser] = useState({});
-  const [token, setToken] = useState(() => {
+  const [token] = useState(() => {
     const localToken = localStorage.getItem("token") || "";
     return JSON.parse(localToken);
   });
